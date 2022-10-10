@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.Container {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+}
+
+.Container .LeftSide .h1 {
+  font-size: 40px;
+  margin: 0;
+  color: #3a4b5c;
+}
+
+.Container .LeftSide .p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #6a7d8b;
+}
+
+.Container .LeftSide .input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid grey;
+  padding: 10px 2px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  outline: 0;
+}
+
+.Container .LeftSide input:disabled {
+  opacity: 0.5;
+}
+
+.Container .LeftSide .button {
+  background-color: #227c9d;
+  color: #fff;
+  font-size: 15px;
+  border: 0px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.Container .LeftSide button:hover {
+  opacity: 0.8;
+}
+
+.Container .LeftSide button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  
+}
+
+.Container .LeftSide {
+  flex: 1;
+  margin-right: 40px;
+}
+.Container .RightSide {
+  flex: 1;
+  margin-left: 40px;
+
+  display: flex;
+}
+.Container .RightSide .grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.Container .RightSide .rightBig {
+  flex: 1;
+  display: flex;
+}
+
+.yourImc {
+  font-size: 17px;
+  margin: 10px 0px 50px 0px;
+}
+
+.Container .RightSide .rightArrow {
+  position: absolute;
+  background-color: #227c9d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -35px;
+  margin-top: 145px;
+  transition: all easy 0.3s;
+}
+.Container .RightSide .rightArrow:hover {
+  opacity: 0.8;
+}
+
+
+@media (max-width: 770px) {
+  header {
+    padding: 0 20px;
+  }
+.Container {
+  padding: 0 20px;
+  flex-direction: column;
+}
+.Container .LeftSide {
+  margin-right: 0;
+
+}
+
+.Container .RightSide{
+
+  margin-left: 0;
+  margin-top: 50px;
+
+}
+
+.Container .RightSide .rightArrow {
+  margin-left: 0;
+  margin-top: 0;
+  border-radius: 10px;
+}
+
+}
+
+@media (max-width: 430px) {
+  .Container .RightSide .grid {
+    grid-template-columns: 1fr;
+  }
+}
